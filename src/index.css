@@ -1,0 +1,124 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.content {
+  display: flex;
+  gap: 200px;
+  max-width: 1600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  display: flex;
+}
+.Form-wrapper {
+  width: 440px;
+}
+header img {
+  width: 140px;
+  height: 50px;
+  margin-top: 100px;
+  margin-left: 120px;
+  margin-bottom: 120px;
+}
+header h2 {
+  text-wrap: nowrap;
+  color: rgb(37, 37, 37);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0%;
+  margin: 0;
+  text-align: center;
+}
+header p {
+  text-wrap: nowrap;
+  color: rgb(75, 75, 75);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  /* Login parolingizni kiritib o‘z kabinetingizga kiring. */
+  width: 404px;
+  height: 24px;
+  left: 224.5px;
+  right: 1291.5px;
+  margin-bottom: 50px;
+}
+
+form p {
+  color: rgb(37, 37, 37);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 0;
+}
+form input:nth-child(2) {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 18px 16px;
+  background: rgb(243, 243, 243);
+}
+
+form p:nth-child(3) {
+  margin-top: 3px;
+  height: 20px;
+  color: red;
+  margin-bottom: 30px;
+}
+
+form p:nth-child(6) {
+  margin-top: 3px;
+  height: 20px;
+  color: red;
+  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+form input:nth-child(5) {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 18px 16px;
+  background: rgb(243, 243, 243);
+}
+form {
+  position: relative;
+}
+
+form button {
+  width: 475px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 17px;
+  border: none;
+  background: rgb(96, 122, 251);
+  margin-bottom: 185px;
+}
+.footer {
+  color: rgb(174, 174, 174);
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.rame {
+  position: absolute;
+  top: 185px;
+  left: 440px;
+  cursor: pointer;
+}
