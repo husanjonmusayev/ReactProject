@@ -1,29 +1,18 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Reg from "./components/Reg/Reg";
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import NotPage from "./components/NotPage/NotPage";
 
 function App() {
-  let [openHom, setOpenHom] = useState(false);
-  function getData() {
-    setOpenHom(true);
-  }
   return (
     <div className="container">
       <BrowserRouter>
-        {/* <header>
-          <nav>
-            <ul>
-              <Link to="/">Home</Link>
-              <Link to="/siginIn">Sigin In</Link>
-            </ul>
-          </nav>
-        </header> */}
-
-        {openHom ? <Home /> : <Reg click={getData} />}
         <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/siginIn" element={<Reg />} /> */}
+          <Route path="/" element={<Reg />} />
+          <Route path="*" element={<NotPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>

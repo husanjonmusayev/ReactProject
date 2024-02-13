@@ -1,3 +1,4 @@
+import "./Reg.css";
 import axios from "axios";
 import { useState } from "react";
 import { useRef } from "react";
@@ -115,7 +116,9 @@ export default function Reg(props) {
           .post(import.meta.env.VITE_API_SIGNIN, user)
           .then((res) => {
             if (res.status == 200) {
-              props.click(true);
+              // props.click(true);
+              window.location.href = "/home";
+              localStorage.setItem("users", JSON.stringify(res));
             }
             if (res.message == "Request failed with status code 404") {
               setUserEror(true);

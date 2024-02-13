@@ -1,0 +1,194 @@
+.content {
+  display: flex;
+  gap: 150px;
+  max-width: 1600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  display: flex;
+}
+.Form-wrapper {
+  width: 475px;
+  margin-left: 150px;
+}
+header img {
+  width: 140px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+}
+header h2 {
+  text-wrap: nowrap;
+  color: rgb(37, 37, 37);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0%;
+  margin: 0;
+  text-align: center;
+}
+header p {
+  text-wrap: nowrap;
+  color: rgb(75, 75, 75);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 404px;
+  height: 24px;
+  left: 224.5px;
+  right: 1291.5px;
+  margin-bottom: 50px;
+}
+
+.eror-title {
+  color: red;
+  font-size: 20px;
+}
+
+form p {
+  color: rgb(37, 37, 37);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 0;
+}
+.name-wrapper input,
+.password-wrapper input,
+.email-wrapper input {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 18px 16px;
+  background: rgb(243, 243, 243);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+form p {
+  margin-top: 3px;
+  height: 20px;
+  color: red;
+
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 475px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 17px;
+  border: none;
+  background: rgb(96, 122, 251);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.footer {
+  color: rgb(174, 174, 174);
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.not {
+  display: none;
+}
+
+.rame {
+  position: absolute;
+  top: 50px;
+  left: 440px;
+  cursor: pointer;
+}
+.Img-wrraper img {
+  width: 750px;
+  height: 750px;
+  object-fit: cover;
+}
+
+.footer a {
+  color: blue;
+  cursor: pointer;
+}
+
+@media (max-width: 826px) {
+  .Img-wrraper img {
+    display: none;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  .Form-wrapper {
+    width: 440px;
+  }
+}
+
+@media (max-width: 626px) {
+  .Img-wrraper img {
+    display: none;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  .Form-wrapper {
+    width: 340px;
+  }
+
+  form button {
+    width: 370px;
+  }
+
+  .rame {
+    position: absolute;
+    top: 55px;
+    left: 340px;
+    cursor: pointer;
+  }
+  header h2 {
+    text-wrap: nowrap;
+    color: rgb(37, 37, 37);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0%;
+    margin: 0;
+    text-align: center;
+  }
+  header p {
+    text-wrap: nowrap;
+    color: rgb(75, 75, 75);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    /* Login parolingizni kiritib o‘z kabinetingizga kiring. */
+    width: 404px;
+    height: 24px;
+    left: 224.5px;
+    right: 1291.5px;
+    margin-bottom: 50px;
+  }
+  header img {
+    width: 140px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+  }
+}
