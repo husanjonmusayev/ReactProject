@@ -95,6 +95,11 @@ form button {
   background: rgb(96, 122, 251);
   margin-bottom: 15px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+form button:hover {
+  background: rgb(53, 71, 165);
 }
 .footer {
   color: rgb(174, 174, 174);
