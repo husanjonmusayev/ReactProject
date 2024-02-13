@@ -20,9 +20,9 @@ body {
 header img {
   width: 140px;
   height: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 120px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 header h2 {
   text-wrap: nowrap;
@@ -42,7 +42,6 @@ header p {
   line-height: 24px;
   letter-spacing: 0%;
   text-align: left;
-  /* Login parolingizni kiritib o‘z kabinetingizga kiring. */
   width: 404px;
   height: 24px;
   left: 224.5px;
@@ -59,7 +58,9 @@ form p {
   text-align: left;
   margin: 0;
 }
-form input:nth-child(2) {
+.name-wrapper input,
+.password-wrapper input,
+.email input {
   font-size: 17px;
   border: none;
   outline: none;
@@ -70,33 +71,16 @@ form input:nth-child(2) {
   background: rgb(243, 243, 243);
 }
 
-form p:nth-child(3) {
-  margin-top: 3px;
-  height: 20px;
-  color: red;
-  margin-bottom: 30px;
-}
-
-form p:nth-child(6) {
-  margin-top: 3px;
-  height: 20px;
-  color: red;
-  margin-bottom: 30px;
-  margin-bottom: 40px;
-}
-
-form input:nth-child(5) {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 8px;
-  padding: 18px 16px;
-  background: rgb(243, 243, 243);
-}
-form {
+.password-wrapper {
   position: relative;
+}
+
+form p {
+  margin-top: 3px;
+  height: 20px;
+  color: red;
+
+  margin-bottom: 10px;
 }
 
 form button {
@@ -108,7 +92,8 @@ form button {
   padding: 17px;
   border: none;
   background: rgb(96, 122, 251);
-  margin-bottom: 55px;
+  margin-bottom: 35px;
+  cursor: pointer;
 }
 .footer {
   color: rgb(174, 174, 174);
@@ -117,14 +102,92 @@ form button {
   font-weight: 500;
 }
 
+.not {
+  display: none;
+}
+
 .rame {
   position: absolute;
-  top: 185px;
+  top: 50px;
   left: 440px;
   cursor: pointer;
 }
 .Img-wrraper img {
-  width: 700px;
-  height: 700px;
+  width: 750px;
+  height: 750px;
   object-fit: cover;
+}
+
+.footer a {
+  color: blue;
+  cursor: pointer;
+}
+
+@media (max-width: 826px) {
+  .Img-wrraper img {
+    display: none;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  .Form-wrapper {
+    width: 440px;
+  }
+}
+
+@media (max-width: 626px) {
+  .Img-wrraper img {
+    display: none;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  .Form-wrapper {
+    width: 340px;
+  }
+
+  form button {
+    width: 370px;
+  }
+
+  .rame {
+    position: absolute;
+    top: 55px;
+    left: 340px;
+    cursor: pointer;
+  }
+  header h2 {
+    text-wrap: nowrap;
+    color: rgb(37, 37, 37);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0%;
+    margin: 0;
+    text-align: center;
+  }
+  header p {
+    text-wrap: nowrap;
+    color: rgb(75, 75, 75);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    /* Login parolingizni kiritib o‘z kabinetingizga kiring. */
+    width: 404px;
+    height: 24px;
+    left: 224.5px;
+    right: 1291.5px;
+    margin-bottom: 50px;
+  }
+  header img {
+    width: 140px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+  }
 }
