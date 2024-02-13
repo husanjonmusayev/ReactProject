@@ -121,13 +121,17 @@ export default function Reg(props) {
   }
 
   return (
+    // content wrapper 
     <div className="content">
+      {/* form wrapper  */}
       <div className="Form-wrapper">
         <header>
+          {/* header  */}
           <img src="/Logo.png" alt="form_logo" />
           <h2>Xush kelibsiz!</h2>
           <p>Login parolingizni kiritib o‘z kabinetingizga kiring.</p>
         </header>
+        {/* form  */}
         <form onSubmit={hendalsubmit}>
           <div className="name-wrapper">
             <span>Name</span>
@@ -138,7 +142,7 @@ export default function Reg(props) {
             />
             <p>{nameErr ? "isim bo'lishi shart" : ""}</p>
           </div>
-          <div className={open ? "email" : "not"}>
+          <div className={open ? "email-wrapper" : "not"}>
             <span>Email</span>
             <input ref={EmailRef} type="text" placeholder="email kiriting" />
             <p>{emailErr ? "email bo'lishi shart" : ""}</p>
@@ -165,6 +169,7 @@ export default function Reg(props) {
           <a onClick={hendalSiginIn}>{open ? "Sigin In" : "Sigin Up"}</a>
         </p>
       </div>
+      {/* img wrapper  */}
       <div className="Img-wrraper">
         <img src="/male.png" alt="male-img" />
       </div>

@@ -60,7 +60,7 @@ form p {
 }
 .name-wrapper input,
 .password-wrapper input,
-.email input {
+.email-wrapper input {
   font-size: 17px;
   border: none;
   outline: none;
@@ -92,7 +92,7 @@ form button {
   padding: 17px;
   border: none;
   background: rgb(96, 122, 251);
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 .footer {
