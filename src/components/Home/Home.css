@@ -41,6 +41,11 @@ main {
   gap: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px lightgray;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: rotate(-10deg);
 }
 .card p {
   text-align: center;
