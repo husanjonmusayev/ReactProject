@@ -86,7 +86,7 @@ export default function Reg(props) {
             );
 
             if (res.request.status == 404) {
-              alert("serverda hatolik");
+              alert("serverda hatolik birozdan so'ng qayta urining");
             }
           }
         })
@@ -106,8 +106,9 @@ export default function Reg(props) {
           .then((res) => {
             if (res.request.status == 200) {
               props.click(true);
-            } else {
-              alert("foydalanuvchi topilmadi");
+            }
+            if (res.message == "Request failed with status code 404") {
+              alert("bunday foydalanuvchi mavjud emas");
             }
           })
           .catch((err) => console.log(err));
