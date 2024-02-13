@@ -79,6 +79,7 @@ export default function Reg(props) {
 
   function hendalsubmit(e) {
     e.preventDefault();
+
     if (validate(nameRef, passwordRef, EmailRef)) {
       let user = {
         username: nameRef.current.value,
@@ -147,6 +148,7 @@ export default function Reg(props) {
 
   return (
     // content wrapper
+
     <div className="content">
       {/* form wrapper  */}
       <div className="Form-wrapper">

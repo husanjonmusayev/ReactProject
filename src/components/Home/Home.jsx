@@ -2,6 +2,7 @@ import axios from "axios";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+
 export default function Home() {
   let data = JSON.parse(localStorage.getItem("users"));
   let name = data.data.username;
@@ -18,7 +19,6 @@ export default function Home() {
       .catch((err) => console.log(err));
   }
 
-  
   return (
     <div className="home-content">
       <header>
