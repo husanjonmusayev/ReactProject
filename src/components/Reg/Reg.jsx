@@ -87,7 +87,7 @@ export default function Reg(props) {
       };
       setCol(EmailRef.current.value);
       axios
-        .post(import.meta.env.VITE_API, user)
+        .post(import.meta.env.VITE_API_SIGNUP, user)
         .then((res) => {
           if (res.data.message == "User registered successfully!") {
             setOpen(false);
@@ -114,7 +114,7 @@ export default function Reg(props) {
         };
 
         axios
-          .post(import.meta.env.VITE_API_SIGNIN, user)
+          .post(import.meta.env.VITE_API, user)
           .then((res) => {
             if (res.status == 200) {
               // props.click(true);
