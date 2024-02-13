@@ -134,11 +134,22 @@ form button:hover {
   .Img-wrraper img {
     display: none;
   }
+
+  .rame {
+    position: absolute;
+    top: 55px;
+    left: 410px;
+    cursor: pointer;
+  }
   .content {
     display: flex;
     justify-content: center;
   }
   .Form-wrapper {
+    width: 440px;
+  }
+
+  form button {
     width: 440px;
   }
 }
@@ -156,13 +167,13 @@ form button:hover {
   }
 
   form button {
-    width: 370px;
+    width: 340px;
   }
 
   .rame {
     position: absolute;
     top: 55px;
-    left: 340px;
+    left: 310px;
     cursor: pointer;
   }
   header h2 {
