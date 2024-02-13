@@ -84,6 +84,10 @@ export default function Reg(props) {
             alert(
               "Qandaydir hatolik yuz berdi Iltimos qaytadan urinib ko'ring"
             );
+
+            if (res.request.status == 404) {
+              alert("serverda hatolik");
+            }
           }
         })
         .catch((err) => console.log(err));
@@ -102,8 +106,8 @@ export default function Reg(props) {
           .then((res) => {
             if (res.request.status == 200) {
               props.click(true);
-            }else{
-          alert("foydalanuvchi topilmadi")
+            } else {
+              alert("foydalanuvchi topilmadi");
             }
           })
           .catch((err) => console.log(err));
@@ -121,7 +125,7 @@ export default function Reg(props) {
   }
 
   return (
-    // content wrapper 
+    // content wrapper
     <div className="content">
       {/* form wrapper  */}
       <div className="Form-wrapper">
