@@ -66,7 +66,6 @@ export default function Reg(props) {
   function clear(nameRef, passwordRef, EmailRef) {
     nameRef.current.value = "";
     passwordRef.current.value = "";
-    EmailRef.current.value = "";
   }
 
   // click sigin in
@@ -103,7 +102,8 @@ export default function Reg(props) {
             alert("foydalanuvchi hatosi");
           }
         });
-      clear(nameRef, passwordRef, EmailRef);
+      EmailRef.current.value = "";
+      clear(nameRef, passwordRef);
     }
     if (!open) {
       if (validate(nameRef, passwordRef)) {
