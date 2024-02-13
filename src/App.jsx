@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Reg from "./components/Reg/Reg";
-import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import NotPage from "./components/NotPage/NotPage";
+import Home from "./Home/Home";
 
 function App() {
   return (
