@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRef } from "react";
 
 export default function Reg(props) {
+  let [userEror, setUserEror] = useState(false);
   let [col, setCol] = useState("");
   let [emailErr, setEmailerr] = useState(false);
   let [nameErr, setNameerr] = useState(false);
@@ -18,6 +19,9 @@ export default function Reg(props) {
     if (!nameRef.current.value.trim()) {
       nameRef.current.focus();
       setNameerr(true);
+      setTimeout(() => {
+        setNameerr(false);
+      }, 2000);
       return false;
     } else {
       setNameerr(false);
@@ -33,6 +37,9 @@ export default function Reg(props) {
       if (!EmailRef.current.value) {
         EmailRef.current.focus();
         setEmailerr(true);
+        setTimeout(() => {
+          setEmailerr(false);
+        }, 2000);
         return false;
       } else {
         setEmailerr(false);
@@ -42,6 +49,9 @@ export default function Reg(props) {
     if (!passwordRef.current.value.trim()) {
       passwordRef.current.focus();
       setPassworderr(true);
+      setTimeout(() => {
+        setPassworderr(false);
+      }, 2000);
       return false;
     } else {
       setPassworderr(false);
@@ -84,13 +94,13 @@ export default function Reg(props) {
             alert(
               "Qandaydir hatolik yuz berdi Iltimos qaytadan urinib ko'ring"
             );
-
-            if (res.request.status == 404) {
-              alert("serverda hatolik birozdan so'ng qayta urining");
-            }
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          if (err.status == 404) {
+            alert("foydalanuvchi hatosi");
+          }
+        });
       clear(nameRef, passwordRef, EmailRef);
     }
     if (!open) {
@@ -104,14 +114,21 @@ export default function Reg(props) {
         axios
           .post(import.meta.env.VITE_API_SIGNIN, user)
           .then((res) => {
-            if (res.request.status == 200) {
+            if (res.status == 200) {
               props.click(true);
             }
             if (res.message == "Request failed with status code 404") {
-              alert("bunday foydalanuvchi mavjud emas");
+              setUserEror(true);
             }
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            if (err.message == "Request failed with status code 404") {
+              setUserEror(true);
+              setTimeout(() => {
+                setUserEror(false);
+              }, 2000);
+            }
+          });
       }
       clear(nameRef, passwordRef);
     }
@@ -134,7 +151,11 @@ export default function Reg(props) {
           {/* header  */}
           <img src="/Logo.png" alt="form_logo" />
           <h2>Xush kelibsiz!</h2>
-          <p>Login parolingizni kiritib o‘z kabinetingizga kiring.</p>
+          <p className={userEror ? "eror-title" : "header-title"}>
+            {userEror
+              ? "Bunday foydalanuvchi mavjud emas"
+              : "Login parolingizni kiritib o‘z kabinetingizga kiring."}
+          </p>
         </header>
         {/* form  */}
         <form onSubmit={hendalsubmit}>

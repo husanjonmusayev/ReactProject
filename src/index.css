@@ -49,6 +49,11 @@ header p {
   margin-bottom: 50px;
 }
 
+.eror-title {
+  color: red;
+  font-size: 20px;
+}
+
 form p {
   color: rgb(37, 37, 37);
   font-size: 18px;
